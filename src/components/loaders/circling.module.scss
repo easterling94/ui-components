@@ -1,0 +1,63 @@
+$backGroundColor: rgb(255, 255, 255);
+$circleColor: rgb(252, 77, 77);
+
+.wrapper {
+  background-color: $backGroundColor;
+  position: relative;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+@mixin loaderGeneral {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: $circleColor;
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  position: relative;
+}
+.loader {
+  @include loaderGeneral();
+}
+
+.loaderWithAnim {
+  @include loaderGeneral();
+  animation: rotationMain 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: block;
+  background-color: $backGroundColor;
+  border-radius: 0 0 100% 0;
+  width: 35px;
+  height: 35px;
+  margin: 0px auto;
+}
+
+.loaderWithAnim::after {
+    content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: block;
+  background-color: $backGroundColor;
+  border-radius: 0 0 100% 0;
+  width: 35px;
+  height: 35px;
+  margin: 0px auto;
+}
+
+@keyframes rotationMain {
+  0% { rotate: 0deg };
+  100% { rotate: 360deg }
+}
