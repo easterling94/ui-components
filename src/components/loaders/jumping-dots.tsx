@@ -18,7 +18,7 @@ export const JumpingDots = () => {
     setAnimation(!animation);
   };
   return (
-    <div className={stylesIndex.loader}>
+    <>
       <div className={styles.wrapper}>
         <div className={styles.dotWrapper}>
           <div
@@ -41,6 +41,6 @@ export const JumpingDots = () => {
       <button id='stop' onClick={stop}>
         Start/Stop
       </button>
-    </div>
+    </>
   );
 };

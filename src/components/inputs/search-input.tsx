@@ -12,17 +12,20 @@ export const SearchInput = () => {
     setValue('');
   };
   return (
-    <form className={styles.searchForm} onSubmit={onSubmit}>
-      <button className={styles.searchBtn} type='submit'>
-        <img src={logo} width='20px' height='20px' alt='Search icon'></img>
-      </button>
-      <input
-        className={styles.searchField}
-        placeholder='Ввидите данные'
-        type='text'
-        value={value}
-        onChange={onChange}
-      ></input>
-    </form>
+    // пришлось добавить еще одну обертку formWrapper т.к. форма иначе центруется по левому верхнему углу
+    <div className={styles.formWrapper}>
+      <form className={styles.searchForm} onSubmit={onSubmit}>
+        <button className={styles.searchBtn} type='submit'>
+          <img src={logo} width='20px' height='20px' alt='Search icon'></img>
+        </button>
+        <input
+          className={styles.searchField}
+          placeholder='Введите данные'
+          type='text'
+          value={value}
+          onChange={onChange}
+        ></input>
+      </form>
+    </div>
   );
 };

@@ -1,6 +1,12 @@
-.searchForm {
-  display: flex;
+.formWrapper {
   position: relative;
+  width: 200px;
+  height: 300px;
+}
+.searchForm {
+  position: absolute;
+  left: 10px;
+  top: 80px;
   height: 30px;
 }
 
