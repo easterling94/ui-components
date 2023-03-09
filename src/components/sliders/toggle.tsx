@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './sliders.module.scss';
+import styles from './toggle.module.scss';
 
 export const Toggle = () => {
   const [modeState, setModeState] = useState<'left' | 'right'>('left');
@@ -9,14 +9,17 @@ export const Toggle = () => {
   return (
     <>
       <div className={styles.wrapper}>
-        <p>Option 1</p>
-        <div className={styles.toggle} onClick={changeMode}>
+        <p>Opt 1</p>
+        <div
+          className={modeState === 'left' ? styles.toggle : styles.toggleRight}
+          onClick={changeMode}
+        >
           <div
             className={styles.circle}
             style={modeState === 'left' ? { left: '0px' } : { left: '40px' }}
           ></div>
         </div>
-        <p>Option 2</p>
+        <p>Opt 2</p>
       </div>
     </>
   );

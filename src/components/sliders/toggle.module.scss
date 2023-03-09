@@ -1,0 +1,40 @@
+$lightThemeBackground: #62e7dc;
+$lightThemeBorder: #56c7bd;
+$darkThemeBackground: #1e4d49;
+$darkThemeBorder: #2e5751;
+.wrapper {
+  margin: 0px auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}
+@mixin toggleBody {
+  margin: 5px 0px;
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.toggle {
+  @include toggleBody();
+  background-color: $lightThemeBackground;
+  border: 3px solid $lightThemeBorder;
+}
+.toggleRight {
+  @include toggleBody();
+  background-color: $darkThemeBackground;
+  border: 3px solid $darkThemeBorder;
+}
+.circle {
+  position: absolute;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: left 0.5s;
+}
