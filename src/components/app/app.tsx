@@ -5,6 +5,7 @@ import { Circling } from '../loaders/circling';
 import { JumpingDots } from '../loaders/jumping-dots';
 import { Toggle } from '../sliders/toggle';
 import { SearchInput } from '../inputs/search-input';
+import { Slider } from '../sliders/slider';
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
       </Wrapper>
       <Wrapper title='Sliders'>
         <Toggle />
+        <Slider />
       </Wrapper>
     </div>
   );

@@ -1,0 +1,19 @@
+.slider {
+  width: 150px;
+  height: 5px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: red;
+  position: relative;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: grey;
+  border: 1px;
+  border-radius: 10px;
+  position: absolute;
+  top: -5px;
+  cursor: pointer;
+}
