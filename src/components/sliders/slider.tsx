@@ -7,8 +7,8 @@ export const Slider = () => {
   const [mouseDown, setMouseDown] = useState(false);
 
   useEffect(() => {
-    const slider = document.getElementById('slider');
-    setClientXPos(slider?.getBoundingClientRect().x);
+    const circle = document.getElementById('circle');
+    setClientXPos(circle?.getBoundingClientRect().x);
   }, []);
 
   useEffect(() => {
@@ -45,8 +45,8 @@ export const Slider = () => {
       <div className={styles.title}>{currentPos}</div>
       <div className={styles.slider}>
         <div
-          id='slider'
-          className={styles.circle}
+          id='circle'
+          className={!mouseDown ? styles.circle : styles.circleActive}
           style={{ left: `${currentPos}px` }}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}

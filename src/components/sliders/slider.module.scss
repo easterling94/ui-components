@@ -10,14 +10,21 @@
   background-color: red;
   position: relative;
 }
-
-.circle {
+@mixin circleMain {
   width: 15px;
   height: 15px;
-  background-color: rgb(99, 88, 88);
   border: 1px;
   border-radius: 10px;
   position: absolute;
   top: -5px;
   cursor: pointer;
+}
+.circle {
+  @include circleMain();
+  background-color: rgb(117, 116, 116);
+}
+.circleActive {
+  @include circleMain();
+  background-color: rgb(177, 177, 177);
+  box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
 }
