@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 import styles from './search-input.module.scss';
-import logo from '../../assets/search_icon_test.png';
+import logo from '../../assets/search_icon.png';
 export const SearchInput = () => {
   const [value, setValue] = useState('');
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
