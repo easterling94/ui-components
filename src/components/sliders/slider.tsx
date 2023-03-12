@@ -42,7 +42,7 @@ export const Slider = () => {
   return (
     <>
       <div className={styles.title}>Сколько вешать в граммах?</div>
-      <div className={styles.title}>{currentPos}</div>
+      <div className={styles.title}>{Math.round(currentPos)}</div>
       <div className={styles.slider}>
         <div
           id='circle'

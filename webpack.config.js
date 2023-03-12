@@ -30,7 +30,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public/bundle')
+    path: path.resolve(__dirname, 'public')
   },
   devServer: {
     static: './public',
